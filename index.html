@@ -80,21 +80,70 @@
   </div>
   <div class="tab-panel" id="panel-quote">
     <div class="slabel">Báo giá</div>
-    <div class="qbox"><div class="qrow"><span class="ql">Ngày</span><span class="qv" id="q_date">—</span></div><div class="qrow">
-  <span class="ql">Công ty</span>
-  <span class="qv" id="q_company">Công ty CP CBG TRUONG THANH</span>
-</div>
-<div class="qrow">
-  <span class="ql">Địa chỉ</span>
-  <span class="qv" id="q_address">Thôn 5A, Xã Ea Drăng, Tỉnh Đắk Lắk, Việt Nam</span>
-</div>
-<div class="qrow">
-  <span class="ql">Điện thoại</span>
-  <span class="qv" id="q_phone">(+84) 123 456 789</span>
-</div>
-<div class="qrow">
-  <span class="ql">Email</span>
-  <span class="qv" id="q_email">sales@furnitureexport.vn</span>
+    <div class="qbox">
+  <!-- Header: logo + thông tin công ty -->
+  <div class="quote-header">
+    <div class="quote-logo">
+      <img src="logo.png" alt="Logo" style="max-width: 100px;">
+    </div>
+    <div class="quote-company">
+      <h2>CÔNG TY CỔ PHẦN CBG TRƯỜNG THÀNH</h2>
+      <p>Thon 5A, Xã Ea Drăng,Tỉnh Daklak, Việt Nam </p>
+      <p>📞 (+84) 123 456 789 | ✉️ sales@furnitureexport.vn</p>
+    </div>
+  </div>
+
+  <!-- Tiêu đề -->
+  <div class="quote-title">
+    <h1>BÁO GIÁ</h1>
+    <p>Quotation</p>
+  </div>
+
+  <!-- Thông tin khách hàng & sản phẩm -->
+  <div class="quote-info">
+    <div class="info-col">
+      <p><strong>Khách hàng:</strong> <span id="q_customer">---</span></p>
+      <p><strong>Ngày:</strong> <span id="q_date">---</span></p>
+      <p><strong>Số đơn hàng:</strong> <span id="q_po">---</span></p>
+    </div>
+    <div class="info-col">
+      <p><strong>Sản phẩm:</strong> <span id="q_name">---</span></p>
+      <p><strong>Mã SP:</strong> <span id="q_code">---</span></p>
+      <p><strong>Số lượng:</strong> <span id="q_qty">---</span></p>
+    </div>
+  </div>
+
+  <!-- Bảng chi tiết (có thể dùng các qrow hoặc bảng) -->
+  <table class="quote-items">
+    <thead>
+      <tr><th>Mô tả</th><th>Đơn vị</th><th>Số lượng</th><th>Đơn giá (VND)</th><th>Thành tiền (VND)</th></tr>
+    </thead>
+    <tbody id="quote-items-body">
+      <!-- Dữ liệu sẽ được JS thêm vào -->
+    </tbody>
+  </table>
+
+  <!-- Tổng kết -->
+  <div class="quote-total">
+    <div class="total-row">
+      <span class="total-label">Tổng giá thành (COGS):</span>
+      <span class="total-value" id="q_cogs">---</span>
+    </div>
+    <div class="total-row fob-row">
+      <span class="total-label fob-label">GIÁ FOB (USD):</span>
+      <span class="total-value fob-value" id="q_fob">---</span>
+    </div>
+    <div class="total-row">
+      <span class="total-label">Chiết khấu:</span>
+      <span class="total-value" id="q_discount">---</span>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="quote-footer">
+    <p>Chân thành cảm ơn quý khách! Mọi thắc mắc xin liên hệ phòng kinh doanh.</p>
+    <p>www.furnitureexport.vn</p>
+  </div>
 </div>
 <div class="qrow"><span class="ql">Mã SP</span><span class="qv" id="q_code">—</span></div><div class="qrow"><span class="ql">Tên SP</span><span class="qv" id="q_name">—</span></div><div class="qrow"><span class="ql">Loại</span><span class="qv" id="q_type">—</span></div><div class="qrow"><span class="ql">Kích thước</span><span class="qv" id="q_size">—</span></div><div class="qrow"><span class="ql">Nguyên liệu</span><span class="qv" id="q_material">—</span></div><div class="qrow"><span class="ql">Hoàn thiện</span><span class="qv" id="q_finish">—</span></div><div class="qrow"><span class="ql">SLDK</span><span class="qv" id="q_qty">—</span></div><div class="qrow"><span class="ql">Đóng gói</span><span class="qv" id="q_packaging">—</span></div><div class="qrow"><span class="ql">Chiết khấu</span><span class="qv" id="q_discount">—</span></div><div class="qfob"><div><div class="qfob-lbl">FOB sau chiết khấu</div></div><div class="qfob-val" id="q_fob">USD —</div></div></div>
     <div class="btn-group"><button class="btn btn-gold" onclick="printQuote()">🖨 IN</button><button class="btn btn-outline" onclick="window.print()">📄 PDF</button></div>
